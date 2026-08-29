@@ -6,7 +6,7 @@ document.addEventListener("paste", (event) => {
         const file = item.getAsFile();
         const image = new Image();
         image.onload = () => {
-            ctx.drawImage(image, 0, 0);
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
         };
         image.src = URL.createObjectURL(file);
     }
