@@ -12,7 +12,9 @@ document.addEventListener("paste", (event) => {
             );
             const width = image.width * scale;
             const height = image.height * scale;
-            ctx.drawImage(image, 0, 0, width, height);
+            const xPos = (canvas.width - width) / 2;
+            const yPos = (canvas.height - height) / 2;
+            ctx.drawImage(image, xPos, yPos, width, height);
         };
         image.src = URL.createObjectURL(file);
     }
