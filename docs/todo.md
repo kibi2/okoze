@@ -14,3 +14,5 @@ They do not necessarily have a fixed priority or deadline.
 - Generate `Contents.md` automatically.
 - Generate `_Sidebar.md` automatically.
 - Consider generating `_Footer.md` for copyright information and other common content.
+- live demo: Display the feature implemented in each episode and the list of tests that became Green
+- live demo index: show wiki header

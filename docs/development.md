@@ -52,7 +52,6 @@ When there is no suitable representative test, the test information can be recor
 
 > **Tip:** It is also a good idea to estimate the expected effort for a feature and its tests. Comparing the estimate with the actual effort later can help improve your estimation skills.
 
-
 ## Refactoring
 
 Refactoring is not treated as a separate feature.
