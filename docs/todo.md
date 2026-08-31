@@ -9,10 +9,11 @@ It is intentionally separate from `features.md`.
 Items can be added here whenever something comes to mind.
 They do not necessarily have a fixed priority or deadline.
 
-## Wiki
+## Wiki and Pages
 
 - Generate `Contents.md` automatically.
 - Generate `_Sidebar.md` automatically.
 - Consider generating `_Footer.md` for copyright information and other common content.
 - live demo: Display the feature implemented in each episode and the list of tests that became Green
 - live demo index: show wiki header
+- Add Google Analytics to the live demos
