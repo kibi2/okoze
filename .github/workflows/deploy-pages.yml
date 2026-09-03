@@ -18,6 +18,7 @@ jobs:
   deploy:
     if: >
       github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
       (
         github.event_name == 'delete' &&
         github.event.ref_type == 'tag' &&
