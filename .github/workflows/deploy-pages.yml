@@ -5,6 +5,8 @@ on:
     tags:
       - "episode-*"
 
+  workflow_dispatch:
+
   delete:
 
 permissions:
@@ -53,18 +55,32 @@ jobs:
             <ul>
           EOF
 
-          for tag in $(git tag -l 'episode-*' --sort=version:refname); do
-            episode="${tag#episode-}"
-            echo "Deploying ${tag}"
+          declare -A seen_episodes
 
+          for tag in $(git tag -l 'episode-*' --sort=refname); do
+            if [[ "$tag" =~ ^episode-([0-9]+)(-fix[1-9A-Za-z])?$ ]]; then
+              episode="${BASH_REMATCH[1]}"
+            else
+              echo "Skipping invalid episode tag: ${tag}"
+              continue
+            fi
+
+            echo "Deploying ${tag} -> episode-${episode}/"
+
+            # Later fixes overwrite earlier versions of the same episode.
+            rm -rf "_site/episode-${episode}"
             mkdir -p "_site/episode-${episode}"
 
             git archive "$tag" \
               index.html main.js style.css \
               | tar -x -C "_site/episode-${episode}"
 
-            echo "              <li><a href=\"./episode-${episode}/\">Episode ${episode}</a></li>" \
-              >> _site/index.html
+            # Add each episode to the site index only once.
+            if [[ -z "${seen_episodes[$episode]+x}" ]]; then
+              echo "              <li><a href=\"./episode-${episode}/\">Episode ${episode}</a></li>" \
+                >> _site/index.html
+              seen_episodes[$episode]=1
+            fi
           done
 
           cat >> _site/index.html <<'EOF'
