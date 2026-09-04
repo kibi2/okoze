@@ -2,11 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>okoze</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>okoze — Episode 004</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="canvas" width="400" height="300"></canvas>
+  <main>
+    <header>
+      <p class="eyebrow">OKOZE / LIVE DEMO</p>
+      <h1>Setting Up the Development Environment</h1>
+    </header>
+
+    <nav>
+      <a href="#" onclick="history.back(); return false;">← Back</a>
+      ·
+      <a href="https://kibi2.github.io/okoze/">Live Demo</a>
+      ·
+      <a href="https://github.com/kibi2/okoze/wiki">Wiki</a>
+    </nav>
+
+    <section class="status">
+      <p class="feature">🟧 1B2 Image import and display adjustment</p>
+      <ul>
+        <li>🟢 When "paste" is executed, the clipboard contents are pasted onto the canvas.</li>
+        <li>🟢 Nothing happens if the clipboard does not contain an image.</li>
+        <li>🟢 The image is fit to the canvas size (the image is automatically scaled up or down; the canvas itself is not scaled).</li>
+        <li>🟢 The image's aspect ratio is preserved.</li>
+        <li>🟢 The image is centered on the canvas.</li>
+      </ul>
+    </section>
+
+    <section class="demo">
+      <div class="demo-label">CANVAS</div>
+      <canvas id="canvas" width="400" height="300"></canvas>
+    </section>
+  </main>
+
+  <hr>
+  <footer>
+    okoze © 2026 OGAWA Keiji
+  </footer>
+
   <script src="main.js"></script>
 </body>
 </html>
