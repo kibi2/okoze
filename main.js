@@ -1,4 +1,4 @@
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("okoze");
 const ctx = canvas.getContext("2d");
 document.addEventListener("paste", (event) => {
     const item = event.clipboardData.items[0];
