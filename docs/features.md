@@ -16,21 +16,22 @@ appropriate.
 Detailed design decisions and the development history are documented
 in the GitHub Wiki and pull requests.
 
-| 🟧   | ID  | Description                         | Done | Notes |
+| 🟧 | ID | Description | Done | Notes |
 | --- | --- | ----------------------------------- | ---- | ----- |
-| 🟧   | 1A  | Development environment             | 🟢    |       |
-| 🟧   | 1B  | Basic puzzle play                   |      |       |
-| 🟧   | 1B1 | Canvas positioning                  |      |       |
-| 🟧   | 1B2 | Image import and display adjustment |      |       |
-| 🟧   | 1B3 | Puzzle frame drawing                |      |       |
-| 🟧   | 1B4 | Entering and deleting numbers       |      |       |
-| 🟧   | 1B5 | Entering and deleting notes         |      |       |
-| 🟧   | 1B6 | Editing lock                        |      |       |
-| 🟧   | 1C  | Saving and resuming puzzles         |      |       |
-| 🟧   | 1D  | Undo/redo                           |      |       |
-| 🟧   | 1E  | Sudoku rules                        |      |       |
-| 🟧   | 1F  | Built-in solving techniques         |      |       |
-| 🟧   | 1G  | Solver                              |      |       |
+| 🟧 | 1A | Development environment | 🟢 |  |
+| 🟧 | 1B | Basic puzzle play |  |  |
+| 🟧 | 1B1 | Canvas positioning |  |  |
+| 🟧 | 1B2 | Image import and display adjustment |  |  |
+| 🟧 | 1B3 | Puzzle frame drawing |  |  |
+| 🟧 | 1B4 | Entering and deleting numbers |  |  |
+| 🟧 | 1B5 | Entering and deleting notes |  |  |
+| 🟧 | 1B6 | Editing lock |  |  |
+| 🟧 | 1C | Saving and resuming puzzles |  |  |
+| 🟧 | 1Cx | Create a New Game |  |  |
+| 🟧 | 1D | Undo/redo |  |  |
+| 🟧 | 1E | Sudoku rules |  |  |
+| 🟧 | 1F | Built-in solving techniques |  |  |
+| 🟧 | 1G | Solver |  |  |
 
 ## Unimplemented tests
 
@@ -56,3 +57,4 @@ or remain ideas.
 - 🟧 Slitherlink
 - 🟧 Plugin architecture
 - 🟧 CI tests
+

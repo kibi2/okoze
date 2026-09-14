@@ -17,3 +17,4 @@ They do not necessarily have a fixed priority or deadline.
 - live demo: Display the feature implemented in each episode and the list of tests that became Green
 - live demo index: show wiki header
 - Add Google Analytics to the live demos
+- Demo: Display the Canvas at the maximum available window size and resize it when the window size changes.
