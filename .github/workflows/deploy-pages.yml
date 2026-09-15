@@ -72,10 +72,15 @@ jobs:
             rm -rf "_site/episode-${episode}"
             mkdir -p "_site/episode-${episode}"
 
-            git archive "$tag" \
-              index.html style.css main.js \
-              box2d.js vec2d.js graph2d.js \
-               | tar -x -C "_site/episode-${episode}"
+            files="index.html style.css main.js"
+            for file in box2d.js vec2d.js graph2d.js; do
+              if git cat-file -e "$tag:$file" 2>/dev/null; then
+                files="$files $file"
+              fi
+            done
+
+            git archive "$tag" $files \
+              | tar -x -C "_site/episode-${episode}"
 
             # Add each episode to the site index only once.
             if [[ -z "${seen_episodes[$episode]+x}" ]]; then
