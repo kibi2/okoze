@@ -2,11 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>okoze</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>okoze — Episode 005</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="okoze" width="400" height="300"></canvas>
+  <main>
+    <header>
+      <p class="eyebrow">OKOZE / LIVE DEMO</p>
+      <h1>Drawing a 9×9 Grid — Part 1</h1>
+    </header>
+
+    <nav>
+      <a href="#" onclick="history.back(); return false;">← Back</a>
+      ·
+      <a href="https://kibi2.github.io/okoze/">Live Demo</a>
+      ·
+      <a href="https://github.com/kibi2/okoze/wiki">Wiki</a>
+    </nav>
+
+    <section class="status">
+      <p class="feature">🟧 1B3 Draw and Position a 9×9 Grid
+      <ul>
+        <li>🟢 Draw a centered square over the image (side length = 80% of the image's shorter side).</li>
+      </ul>
+    </section>
+
+    <section class="demo">
+      <div class="demo-label">CANVAS</div>
+      <canvas id="okoze" width="400" height="300"></canvas>
+    </section>
+  </main>
+
+  <hr>
+  <footer>
+    okoze © 2026 OGAWA Keiji
+  </footer>
+
   <script type="module" src="./main.js"></script>
 </body>
 </html>
